@@ -11,13 +11,14 @@ public class Operation {
         this.value2 = value2;
     }
     public int execute(){
+        //É possível instanciar uma innerClass dentro da outerClass.
         Sum sum = new Sum();
         return sum.calculate();
     }
 
-    //A classe Sum é muito atrelada a operation, ela não tem sentido sozinha. Entao, ela pode ser uma innerClass.
+    //A classe Sum é muito atrelada a operation, ela não tem sentido sozinha. Entao, ela é uma candidata a ser uma innerClass.
 
-    //**** Regular innerClass **** privada. A innerClass tem acesso aos atributos da sua alterCLass, ou seja, a classe externa a
+    //**** Regular innerClass **** privada. A innerClass tem acesso aos atributos da sua outerCLass, ou seja, a classe externa a
     //innerClass
     private class Sum {
 
