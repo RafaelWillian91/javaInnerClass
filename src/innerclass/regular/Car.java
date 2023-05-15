@@ -26,10 +26,12 @@ public class Car {
 
         private boolean isOpen;
 
-        private void setOpen(){
+        public void open(){
             this.isOpen = true;
+            //Todas as innerClass tem acesso as instâncias criadas na outerClass
+            //engine.injectFuel();
            }
-        private void setClose(){
+        public void close(){
                this.isOpen = false;
            }
 
