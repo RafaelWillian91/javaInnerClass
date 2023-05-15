@@ -5,6 +5,7 @@ public class Car {
     private int speed;
     //Quando a outerClass é criada é tambem criada a innerClass
     private Engine engine = new Engine();
+    private boolean on;
 
     public void accelerate(){
         engine.injectFuel();
@@ -16,9 +17,14 @@ public class Car {
 
     //Ao deixar a innerClass private é mantido o encapsulamento da mesma. Não faz sentido existir instancia de Engine nesse contexto
     private class Engine {
+        private boolean on;
           public void injectFuel(){
               speed += +10;
           }
+          public boolean isAllon(){
+              return on && Car.this.on;
+          }
+
 
        }
 
