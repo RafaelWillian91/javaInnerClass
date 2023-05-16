@@ -14,5 +14,18 @@ public class StaticnestedApp1 {
         Operation.Counter counter = op1.getCount1();
         System.out.println(counter.getCount());
 
+        System.out.println("----------------------------------------------------------");
+
+        Operation1 op2 = new Operation1(79, 20);
+        System.out.println(op2.sum());
+        System.out.println(op2.sum());
+
+        System.out.println(op2.getCount1().getCount());
+
+        //Para referenciar uma classe static como innerClass
+        Operation1.Counter counter2 = op2.getCount1();
+        System.out.println(counter2.getCount());
+
+
     }
 }
