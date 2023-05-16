@@ -7,6 +7,11 @@ public class LocalInnerClassApp1 {
         Application aplication = new Application();
         aplication.greet();
 
+        System.out.println("-------------------------------------");
+
+        Application2 application2 = new Application2();
+        application2.greet("Rafael");
+
     }
 
 
