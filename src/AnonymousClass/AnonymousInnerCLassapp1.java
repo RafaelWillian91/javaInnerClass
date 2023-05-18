@@ -12,9 +12,11 @@ public class AnonymousInnerCLassapp1 {
             }
 
             @Override
-            public int teste() {
+            public int num() {
                 return 0;
             }
+
+
         };
 
         //Posso ter mais de uma classe anonima implementando a mesma interface.
@@ -25,14 +27,29 @@ public class AnonymousInnerCLassapp1 {
             }
 
             @Override
-            public int teste() {
-                return 0;
+            public int num() {
+                return 10;
             }
+
+
+            //Funciona comop uma classe normal, então esse método só é visto na anonymous class e portando nao pode ser
+            //chamado com base na interface -> Message m = new Message(){}, pq não podemos fazer Message m = new AnonymousClass(){}. pq
+            // essa anonymous inner class é gerada em tempo de compilação.
+            public int test(){
+                return 4;
+            }
+
+
         };
 
 
         System.out.println(m.message());
         System.out.println(m2.message());
+        System.out.println(m2.num());
+
+
+
+
 
     }
 
