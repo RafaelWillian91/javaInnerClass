@@ -14,9 +14,14 @@ public class AnonymousInnerClassHerancaapp2 {
             public void eat() {
                 System.out.println("lunch Time com Anonymous!!!");
             }
+
+            public void teste(){
+                System.out.println("sasa");
+            }
         };
 
         f2.eat();
+        //f2.teste(); // nao definido dentro da classe FoodHerancaapp2, portando não é possivel chamalo, devido ao polimorfismo.
 
 
     }
